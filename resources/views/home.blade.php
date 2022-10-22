@@ -38,13 +38,13 @@
                     @endphp
                     @if ($slayActivi === 1)
                         <div class="carousel-item active">
-                            <img src="{{ asset('storage/img/SlayderMain/' . $itemSlay->imagen . '') }}" class="d-block w-100"
-                                alt="..." height="410px">
+                            <img src="{{ asset('storage/img/SlayderMain/' . $itemSlay->imagen . '') }}"
+                                class="d-block w-100" alt="..." height="410px">
                         </div>
                     @else
                         <div class="carousel-item ">
-                            <img src="{{ asset('storage/img/SlayderMain/' . $itemSlay->imagen . '') }}" class="d-block w-100"
-                                alt="..." height="410px">
+                            <img src="{{ asset('storage/img/SlayderMain/' . $itemSlay->imagen . '') }}"
+                                class="d-block w-100" alt="..." height="410px">
                         </div>
                     @endif
                 @endforeach
@@ -207,9 +207,10 @@
                                 </div>
                                 <div class="mb-2 d-flex justify-content-between  ">
                                     {{--  <span class="text-dark"><del>s/ {{ $key['precio'] }}</del></span>  --}}
-                                    <span class="text-dark"><del>S/ {{number_format($key['precio'], 2, ".", ",")}}</del></span>
-                                    
-                                    <span class="text-dark">S/ {{number_format($key['newPrecio'], 2, ".", ",")}}</span>
+                                    <span class="text-dark"><del>S/
+                                            {{ number_format($key['precio'], 2, '.', ',') }}</del></span>
+
+                                    <span class="text-dark">S/ {{ number_format($key['newPrecio'], 2, '.', ',') }}</span>
                                 </div>
                                 <div class=" align-items-center d-flex mb-2 ">
                                     <span class="h6 mb-0 text-muted fw-normal">
@@ -286,5 +287,4 @@
     {{ $producto->links() }}
     {{-- @include('User.modelViewAdd') --}}
     @include('User.modelAddProCart')
-
 @endsection

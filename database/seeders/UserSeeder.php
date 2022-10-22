@@ -24,8 +24,18 @@ class UserSeeder extends Seeder
         $userAdmin->email='cley@gmail.com';
         $userAdmin->rol='4';
         $userAdmin->avatar='http://127.0.0.1:8000/storage/img/icons/person-circle.svg';
-        $userAdmin->password='$2y$10$/zwFfNZlbD.nwq4hhsL5Le1B1msGebTTUxY7hOjHmw/wioWZNMW7q';
+        $userAdmin->password=bcrypt('123456');
+        // $userAdmin->password='$2y$10$/zwFfNZlbD.nwq4hhsL5Le1B1msGebTTUxY7hOjHmw/wioWZNMW7q';
         $userAdmin->save();
+
+        $userAdmin1=new User();
+        $userAdmin1->name='junior';
+        $userAdmin1->email='junior@gmail.com';
+        $userAdmin1->rol='4';
+        $userAdmin1->avatar='http://127.0.0.1:8000/storage/img/icons/person-circle.svg';
+        $userAdmin1->password=bcrypt('123456');
+        // $userAdmin->password='$2y$10$/zwFfNZlbD.nwq4hhsL5Le1B1msGebTTUxY7hOjHmw/wioWZNMW7q';
+        $userAdmin1->save();
         // user log rol 0
         $userLocal=new User();
         $userLocal->name='jose';
