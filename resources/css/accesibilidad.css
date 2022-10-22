@@ -1,0 +1,672 @@
+/* ACCESIBILITY BAR */
+
+.accesibility-bar {
+  position: fixed;
+  bottom: 5%;
+  left: -200px;
+  display: flex;
+  flex-flow: column nowrap;
+  z-index: 250;
+  list-style: none;
+  background: #fff;
+  box-shadow: -1px 4px 24px -8px rgb(0 0 0 / 30%);
+  color: #000;
+  width: 200px;
+  transition: all ease-in-out 0.25s;
+  box-sizing: border-box;
+  padding: 0.8em 0;
+}
+
+.accesibility-bar.active-accesibility {
+  left: 0;
+}
+
+.accesibility-bar li {
+  list-style: none;
+  padding: 0.8em 0.8em;
+  color: #000;
+  cursor: pointer;
+  transition: all ease-in-out 0.15s;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 0.85rem;
+  border-bottom: 1px solid #eee !important;
+}
+
+.accesibility-bar li:last-child {
+  border-bottom: none !important;
+}
+
+.accesibility-bar li span {
+  margin-left: 10px;
+}
+
+.accesibility-bar li.active-item {
+  background: rgb(0, 214, 165) !important;
+}
+
+/* .accesibility-bar li:hover {
+    background: rgb(0, 214, 165);
+    color: #191919;
+} */
+
+.accesibility-bar .accesibility-activator {
+  position: absolute;
+  bottom: 0;
+  right: -50px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 214, 165);
+  color: #191919;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: -1px 4px 24px -8px rgb(0 0 0 / 30%);
+  font-size: 2rem;
+}
+
+@media screen and (min-width: 1400px) {
+  .accesibility-bar {
+    width: 270px;
+    left: -270px;
+  }
+  .accesibility-bar li {
+    font-size: 0.95rem;
+  }
+  .accesibility-bar .accesibility-activator {
+    width: 70px;
+    height: 70px;
+    right: -70px;
+  }
+}
+
+/* DARK */
+
+body.dark,
+body.dark > div,
+body.dark > article,
+body.dark section,
+body.dark > main,
+body.dark footer body.dark td,
+body.dark th,
+body.dark tr,
+body.dark li,
+body.dark button,
+body.dark header {
+  background: rgb(10, 10, 10) !important;
+}
+
+body.dark [class^="bg-"] {
+  background: rgb(10, 10, 10) !important;
+}
+
+body.dark div,
+body.dark p,
+body.dark span,
+body.dark small,
+body.dark strong,
+body.dark div,
+body.dark pre,
+body.dark article,
+body.dark section,
+body.dark a,
+body.dark button,
+body.dark i,
+body.dark li,
+body.dark ul {
+  color: #fff !important;
+}
+
+body.dark a,
+body.dark a span,
+body.dark a i {
+  color: #fff !important;
+}
+
+body.dark h1,
+body.dark h1 span,
+body.dark h2,
+body.dark h2 span,
+body.dark h3,
+body.dark h3 span,
+body.dark h4,
+body.dark h4 span,
+body.dark h5,
+body.dark h5 span,
+body.dark strong {
+  color: rgb(0, 214, 165) !important;
+}
+
+body.dark .app-content-link,
+body.dark .app-slide-progress .progress-cover {
+  background: #009 !important;
+}
+
+body.dark .mission-icon,
+body.dark .vision-icon {
+  display: none;
+}
+
+/* END DARK */
+
+/* HIGH CONTRAST */
+
+body.high-contrast,
+body.high-contrast ul,
+body.high-contrast td,
+body.high-contrast th,
+body.high-contrast tr,
+body.high-contrast > div,
+body.high-contrast > article,
+body.high-contrast section,
+body.high-contrast > main,
+body.high-contrast button,
+body.high-contrast header,
+body.high-contrast footer {
+  background: rgb(0, 0, 0) !important;
+}
+
+body.high-contrast [class^="bg-"] {
+  background: rgb(0, 0, 0) !important;
+}
+
+body.high-contrast h1,
+body.high-contrast h2,
+body.high-contrast h3,
+body.high-contrast h4,
+body.high-contrast h5,
+body.high-contrast h6,
+body.high-contrast div,
+body.high-contrast p,
+body.high-contrast span,
+body.high-contrast small,
+body.high-contrast strong,
+body.high-contrast div,
+body.high-contrast pre,
+body.high-contrast article,
+body.high-contrast section,
+body.high-contrast a,
+body.high-contrast button,
+body.high-contrast i,
+body.high-contrast li,
+body.high-contrast ul {
+  color: #fff !important;
+}
+
+body.high-contrast h1,
+body.high-contrast h1 span,
+body.high-contrast h2,
+body.high-contrast h2 span,
+body.high-contrast h3,
+body.high-contrast h3 span,
+body.high-contrast a,
+body.high-contrast a span,
+body.high-contrast a h3,
+body.high-contrast strong,
+body.high-contrast a i {
+  color: rgb(255, 201, 58) !important;
+}
+
+body.high-contrast .app-service-card:hover {
+  background-color: rgb(255, 201, 58) !important;
+}
+
+body.high-contrast .mission-icon,
+body.high-contrast .vision-icon {
+  display: none;
+}
+
+/* END HIGH CONTRAST */
+
+/* underline mode */
+
+body.underline-links a:hover,
+body.underline-links a:hover h1,
+body.underline-links a:hover h2,
+body.underline-links a:hover h3,
+body.underline-links a:hover h4,
+body.underline-links a:hover h5,
+body.underline-links a:hover h6,
+body.underline-links a:hover span,
+body.underline-links a:hover small,
+body.underline-links a:hover strong {
+  text-decoration: underline !important;
+}
+
+/* Readable font */
+
+body.readable-font {
+  font-family: "Arial Black", "Arial Bold", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+body.readable-font h1,
+body.readable-font h2,
+body.readable-font h3,
+body.readable-font h4,
+body.readable-font h5,
+body.readable-font h6,
+body.readable-font a,
+body.readable-font button,
+body.readable-font p,
+body.readable-font div,
+body.readable-font article,
+body.readable-font figure,
+body.readable-font small,
+body.readable-font strong,
+body.readable-font header {
+  font-family: "Arial Black", "Arial Bold", Arial, Helvetica, sans-serif !important;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-weight: bold;
+}
+
+body.readable-font a::before {
+  font-family: "icomoon" !important;
+}
+
+/* ZOOM */
+
+body.zoom-1 span,
+body.zoom-1 button,
+body.zoom-1 a,
+body.zoom-1 h1,
+body.zoom-1 h2,
+body.zoom-1 h3,
+body.zoom-1 h4,
+body.zoom-1 h5,
+body.zoom-1 h6,
+body.zoom-1 p {
+  zoom: 104% !important;
+}
+
+body.zoom-2 span,
+body.zoom-2 button,
+body.zoom-2 a,
+body.zoom-2 h1,
+body.zoom-2 h2,
+body.zoom-2 h3,
+body.zoom-2 h4,
+body.zoom-2 h5,
+body.zoom-2 h6,
+body.zoom-2 p {
+  zoom: 110% !important;
+}
+
+@media screen and (max-width: 1500px) {
+  body.zoom-1 span,
+  body.zoom-1 button,
+  body.zoom-1 a,
+  body.zoom-1 h1,
+  body.zoom-1 h2,
+  body.zoom-1 h3,
+  body.zoom-1 h4,
+  body.zoom-1 h5,
+  body.zoom-1 h6,
+  body.zoom-1 p {
+    zoom: 103.5%;
+  }
+  body.zoom-2 span,
+  body.zoom-2 button,
+  body.zoom-2 a,
+  body.zoom-2 h1,
+  body.zoom-2 h2,
+  body.zoom-2 h3,
+  body.zoom-2 h4,
+  body.zoom-2 h5,
+  body.zoom-2 h6,
+  body.zoom-2 p {
+    zoom: 107%;
+  }
+}
+
+/* GRAY SCALE */
+html.gray-scale {
+  filter: grayscale(100%) !important;
+  overflow-x: hidden !important;
+}
+
+/* body.gray-scale > header,
+body.gray-scale > footer,
+body.gray-scale > section {
+  filter: grayscale(100%) !important;
+  overflow-x: hidden !important;
+}
+ */
+
+body.voice-active a.active,
+body.voice-active a.active span,
+body.voice-active a.active small,
+body.voice-active a.active strong,
+body.voice-active a.active h1,
+body.voice-active a.active h2,
+body.voice-active a.active h3,
+body.voice-active a.active i,
+body.voice-active p.active,
+body.voice-active h1.active,
+body.voice-active h1.active span,
+body.voice-active h2.active,
+body.voice-active h2.active span,
+body.voice-active h3.active,
+body.voice-active h3.active span,
+body.voice-active h4.active,
+body.voice-active h5.active,
+body.voice-active h6.active,
+body.voice-active button.active {
+  background-color: #00e5b0;
+  outline: 2px solid #000;
+  color: #000 !important;
+}
+
+:is(body.zoom-1, body.zoom-2, body.gray-scale, body.dark, body.high-contrast, body.underline-links, body.readable-font)
+  a:focus,
+:is(body.zoom-1, body.zoom-2, body.gray-scale, body.dark, body.high-contrast, body.underline-links, body.readable-font)
+  a:focus
+  span,
+:is(body.zoom-1, body.zoom-2, body.gray-scale, body.dark, body.high-contrast, body.underline-links, body.readable-font)
+  a:focus
+  small,
+:is(body.zoom-1, body.zoom-2, body.gray-scale, body.dark, body.high-contrast, body.underline-links, body.readable-font)
+  a:focus
+  strong,
+:is(body.zoom-1, body.zoom-2, body.gray-scale, body.dark, body.high-contrast, body.underline-links, body.readable-font)
+  a:focus
+  h1,
+:is(body.zoom-1, body.zoom-2, body.gray-scale, body.dark, body.high-contrast, body.underline-links, body.readable-font)
+  a:focus
+  h2,
+:is(body.zoom-1, body.zoom-2, body.gray-scale, body.dark, body.high-contrast, body.underline-links, body.readable-font)
+  a:focus
+  h3,
+:is(body.zoom-1, body.zoom-2, body.gray-scale, body.dark, body.high-contrast, body.underline-links, body.readable-font)
+  a:focus
+  i,
+:is(body.zoom-1, body.zoom-2, body.gray-scale, body.dark, body.high-contrast, body.underline-links, body.readable-font)
+  p:focus,
+:is(body.zoom-1, body.zoom-2, body.gray-scale, body.dark, body.high-contrast, body.underline-links, body.readable-font)
+  h1:focus,
+:is(body.zoom-1, body.zoom-2, body.gray-scale, body.dark, body.high-contrast, body.underline-links, body.readable-font)
+  h1:focus
+  span,
+:is(body.zoom-1, body.zoom-2, body.gray-scale, body.dark, body.high-contrast, body.underline-links, body.readable-font)
+  h2:focus,
+:is(body.zoom-1, body.zoom-2, body.gray-scale, body.dark, body.high-contrast, body.underline-links, body.readable-font)
+  h2:focus
+  span,
+:is(body.zoom-1, body.zoom-2, body.gray-scale, body.dark, body.high-contrast, body.underline-links, body.readable-font)
+  h3:focus,
+:is(body.zoom-1, body.zoom-2, body.gray-scale, body.dark, body.high-contrast, body.underline-links, body.readable-font)
+  h3:focus
+  span,
+:is(body.zoom-1, body.zoom-2, body.gray-scale, body.dark, body.high-contrast, body.underline-links, body.readable-font)
+  h4:focus,
+:is(body.zoom-1, body.zoom-2, body.gray-scale, body.dark, body.high-contrast, body.underline-links, body.readable-font)
+  h5:focus,
+:is(body.zoom-1, body.zoom-2, body.gray-scale, body.dark, body.high-contrast, body.underline-links, body.readable-font)
+  h6:focus,
+:is(body.zoom-1, body.zoom-2, body.gray-scale, body.dark, body.high-contrast, body.underline-links, body.readable-font)
+  button:focus {
+  background-color: #00e5b0;
+  outline: 2px solid #000;
+  color: #000 !important;
+}
+
+body a:focus span,
+body a:focus small,
+body a:focus strong,
+body a:focus h1,
+body a:focus h2,
+body a:focus h3,
+body a:focus i,
+body.voice-active a.active span,
+body.voice-active a.active small,
+body.voice-active a.active strong {
+  outline: none !important;
+}
+
+/* ACCESIIBILITY VOICE SEARCH */
+
+.searcher-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  z-index: 10;
+  background: #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease-in-out 0.3s;
+  z-index: 1000;
+}
+
+.searcher-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.searcher-wrapper.active-search {
+  opacity: 1;
+  visibility: visible;
+}
+
+.close-btn {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #00a39c !important;
+  cursor: pointer;
+}
+
+.close-btn svg {
+  fill: #000;
+}
+
+#results {
+  width: 100%;
+  padding: 0 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 50px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+#results #final_span,
+#interim_span {
+  color: #fff;
+  font-size: 40px;
+}
+
+#interim_span {
+  opacity: 0.5;
+}
+
+#tip {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  width: 250px;
+  opacity: 0.8;
+  color: rgba(255, 255, 255, 0.75);
+  margin-left: -125px;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease-in;
+}
+
+#tip.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease-out;
+}
+
+.visual {
+  position: absolute;
+  bottom: 0;
+  width: 400px;
+  height: 400px;
+  margin-bottom: -155px;
+  border-radius: 100%;
+  left: 50%;
+  margin-left: -200px;
+  z-index: 0;
+  transform: scale(0.001);
+  mix-blend-mode: screen;
+  opacity: 0;
+  transition: all 0.3s;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* #viz1 {
+    background-color: #ff0000;
+}
+#viz2 {
+    background-color: #00ff00;
+}
+#viz3 {
+    background-color: #0000ff;
+}
+*/
+
+#visualization {
+  position: absolute;
+}
+
+#visualization div {
+  background-color: orange;
+  padding: 10px;
+  margin: 3px;
+  width: 100px;
+  display: inline-block;
+  vertical-algin: bottom;
+}
+
+#button-search {
+  background-color: #028b78 !important;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  margin-left: -25px;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 15;
+  cursor: pointer;
+  z-index: 1010;
+}
+
+#button-search:active {
+  background-color: #d02 !important;
+}
+
+#button-search #microphone {
+  fill: #fff;
+  width: 30px;
+  position: absolute;
+  left: 50%;
+  margin-left: -14px;
+  top: 20%;
+}
+
+#button-search.cancel #microphone {
+  fill: transparent;
+}
+
+#button-search.cancel:before,
+#button-search.cancel:after {
+  position: absolute;
+  background-color: #fff;
+  width: 2px;
+  height: 16px;
+  display: block;
+  content: "";
+  transform: rotate(45deg);
+  left: 50%;
+  top: 50%;
+  margin-left: -1px;
+  margin-top: -8px;
+  opacity: 0.8;
+  z-index: 15;
+}
+
+#button-search.cancel:after {
+  transform: rotate(-45deg);
+}
+
+#button-search .element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  z-index: 3;
+}
+
+#button-search .element .slice {
+  background-color: #595959;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 24px;
+  height: 24px;
+  border-radius: 24px 0 0 0;
+  z-index: 10;
+}
+
+#button-search .loading {
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  width: 46px;
+  height: 46px;
+  border-radius: 100%;
+  transform: rotate(-45deg);
+  border: 2px solid white;
+  border-color: white transparent transparent transparent;
+}
+
+#button-search .loading.ring {
+  position: absolute;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  z-index: 4;
+  transform: rotate(45deg);
+}
+
+#result-search-list ul li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 1.2em 0;
+}
+
+#result-search-list ul li a {
+  color: #fff;
+  font-size: 15px;
+}
+
+#result-search-list ul li a span {
+  display: block;
+  margin-left: 5px;
+  font-size: 13px;
+}
+
+#result-search-list ul li a strong {
+  display: inline-block;
+  background: #00a39c;
+}
+
+#result-search-list ul li a:hover strong {
+  color: #000;
+}
+
+#result-search-list ul li a:hover {
+  color: #00a39c;
+}
